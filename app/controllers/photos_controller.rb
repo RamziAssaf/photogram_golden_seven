@@ -30,10 +30,10 @@ class PhotosController < ApplicationController
   end
 
   def update_row
-    i = Photo.find_by({ :id => params[:id] })
-    i.source = params[:the_new_source]
-    i.caption = params[:the_new_caption]
-    i.save
+    @database_row = Photo.find_by({ :id => params[:id] })
+    @database_row.source = params[:the_new_source]
+    @database_row.caption = params[:the_new_caption]
+    @database_row.save
     render("show")   
   end
 

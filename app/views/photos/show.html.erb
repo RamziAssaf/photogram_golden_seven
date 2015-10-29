@@ -3,3 +3,13 @@
 <img src=" <%= @database_row.source %> " width = 45%>
 
 <p><%= @database_row.caption %></p>
+
+<td>
+   <a href="http://localhost:3000/photos/">Back</a>
+</td>
+<td>
+   <a href="http://localhost:3000/photos/<%= @database_row.id %>/edit">Edit</a>
+</td>
+<td>
+   <a href="http://localhost:3000/delete_photo/<%= @database_row.id %>">Delete</a>
+</td>
